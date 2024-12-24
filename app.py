@@ -24,7 +24,7 @@ def run():
     app_init()
     prompt=st.chat_input("Add your prompt...")
 
-    llm=ChatOllama(model="qwen2.5:0.5b",temperature=0.7)
+    llm=ChatOllama(model="granite3-moe:1b",temperature=0.7)
     if prompt:
         st.chat_message("user").write(prompt)
         st.session_state["chat_history"]+=[HumanMessage(prompt)]
